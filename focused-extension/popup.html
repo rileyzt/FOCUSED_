@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FOCUSED Extension</title>
+    <style>
+        body {
+            width: 320px;
+            font-family: Arial, sans-serif;
+            background-color: #1e1e2e;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            border-radius: 10px;
+        }
+        h2 { margin-bottom: 10px; }
+        .button { 
+            padding: 8px; 
+            border-radius: 5px; 
+            cursor: pointer; 
+            margin: 5px; 
+            border: none;
+        }
+        .start-btn { background-color: #4CAF50; color: white; }
+        .stop-btn { background-color: #d9534f; color: white; }
+        .block-btn { background-color: #f39c12; color: white; }
+        .input-box {
+            width: 90%;
+            padding: 5px;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            text-align: left;
+        }
+        .site-item {
+            display: flex;
+            justify-content: space-between;
+            background: #282a36;
+            padding: 8px;
+            border-radius: 5px;
+            margin-top: 5px;
+        }
+        .timer {
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2>FOCUSED</h2>
+    
+    <h3>Focus Timer</h3>
+    <div class="timer" id="timerDisplay">00:00</div>
+    <input type="number" id="focusDuration" class="input-box" placeholder="Enter minutes">
+    <button class="button start-btn" id="startFocus">Start</button>
+    <button class="button stop-btn" id="stopFocus" disabled>Stop</button>
+
+    <h3>Block Websites</h3>
+    <input type="text" id="siteInput" class="input-box" placeholder="Enter site to block">
+    <button class="button block-btn" id="addSiteBtn">Add</button>
+    <ul id="siteList"></ul>
+    
+    <button class="button block-btn" id="blockAll">Block All</button>
+    <button class="button stop-btn" id="unblockAll">Unblock All</button>
+
+    <script src="popup.js"></script>
+</body>
+</html>
